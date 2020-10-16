@@ -38,6 +38,11 @@ class QuestionnaireController extends Controller
         //dd($questionnaire);
         return view('questionnaire.show', compact('questionnaire'));
     }
+    public function edit(Questionnaire $questionnaire){
+        $questionnaire->load('questions.answers.responses');
+        //dd($questionnaire);
+        return view('questionnaire.edit', compact('questionnaire'));
+    }
 
     protected function destroy(Questionnaire $questionnaire)
     {

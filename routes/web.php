@@ -22,6 +22,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/questionnaires/create', 'QuestionnaireController@create')->name('create');
 Route::get('/questionnaires/{questionnaire}', 'QuestionnaireController@show')->name('show');
+Route::get('/questionnaires/edit/{questionnaire}', 'QuestionnaireController@edit')->name('edit');
 Route::delete('/questionnaires/{questionnaire}', 'QuestionnaireController@destroy')->name('show');
 Route::get('/questionnaires/{questionnaire}/questions/create', 'QuestionController@create');
 Route::post('/questionnaires/{questionnaire}/questions/', 'QuestionController@store');
